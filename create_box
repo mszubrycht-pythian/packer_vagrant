@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -e
+
+# uncomment the line below to automatically remove previously registered vagrant box
+#vagrant box remove vagrant_packer --force
+starttime=`date`
+#export PACKER_LOG=1
+rm packer_virtualbox-iso_virtualbox.box || true
+packer build -only virtualbox-iso packer.json
+#packer build -debug -only virtualbox-iso packer.json
+
+vagrant box remove vagrant_packer || true
+vagrant box add vagrant_packer packer_virtualbox-iso_virtualbox.box
+
+endtime=`date`
+
+echo "started at:  $starttime "
+echo "finished at: $endtime"

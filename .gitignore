@@ -1,0 +1,5 @@
+.vagrant
+*.box
+*.tar
+*.gz
+*.qcow2
