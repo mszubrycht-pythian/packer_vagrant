@@ -25,4 +25,4 @@ The entire process can be run unattended, it takes < 15 minutes on my MBP w/SSD 
 OpenStack
 ---------
 
-OpenStack likes the .qcow2 vm image format.  To convert the .vmdk file to qcow2, run *./vmdk2qcow2.sh*
+OpenStack likes the taste of .qcow2 vm image format.  To convert the .vmdk file to qcow2, run *./vmdk2qcow2.sh*
