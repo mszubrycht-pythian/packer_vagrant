@@ -1,17 +1,25 @@
 packer_vagrant
 ==============
 
-Prerequisites
--------------
+Overview
+--------
 
-Clone this repo, cd to it.
-Make sure ubuntu-12.04.5-server-amd64.iso install image can be found in ../iso, relative to the root of this repo.
+Files contained in this repo will create a Vagrant box running Ubuntu 12.04.5, with a quite complete set of build toolset, common utilities and the nodejs package.  The resulting Vagrant .box file is ~650M. 
 
 
-Run
----
+The Impatient Way(tm)
+---------------------
 
-The entire process can be run unattended, simply run *./create_box* and let it finish.  Takes < 15 minutes on my MBP w/SSD.
+```{bash}
+mkdir iso && cd iso
+wget http://releases.ubuntu.com/12.04.5/ubuntu-12.04.5-server-amd64.iso
+cd ../
+git clone https://github.com/mszubrycht-blackbirdit/packer_vagrant.git
+cd packer_vagrant
+./create_box
+```
+
+The entire process can be run unattended, it takes < 15 minutes on my MBP w/SSD to complete..
 
 
 OpenStack
