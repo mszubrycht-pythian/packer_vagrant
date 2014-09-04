@@ -3,3 +3,4 @@
 *.tar
 *.gz
 *.qcow2
+ssh_pubkeys

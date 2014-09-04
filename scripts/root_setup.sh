@@ -29,6 +29,9 @@ cp /etc/sudoers /etc/sudoers.orig
 sed -i -e '/Defaults\s\+env_reset/a Defaults\texempt_group=admin' /etc/sudoers
 sed -i -e 's/%admin ALL=(ALL) ALL/%admin ALL=NOPASSWD:ALL/g' /etc/sudoers
 
+# add chef
+/usr/bin/curl -L https://www.opscode.com/chef/install.sh | bash
+
 
 # Install project-specific packages
 apt-get -y install nodejs npm 
