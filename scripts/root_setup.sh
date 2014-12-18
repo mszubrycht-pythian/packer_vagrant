@@ -22,7 +22,7 @@ apt-get -y install linux-headers-$(uname -r) build-essential dkms nfs-common lib
 apt-get -y install curl wget git vim tmux gawk zerofree
 
 
-# Setup sudo to allow no-password sudo for "admin"
+# no-password sudo for "admin" group
 groupadd -r admin
 usermod -a -G admin vagrant
 cp /etc/sudoers /etc/sudoers.orig
@@ -30,7 +30,7 @@ sed -i -e '/Defaults\s\+env_reset/a Defaults\texempt_group=admin' /etc/sudoers
 sed -i -e 's/%admin ALL=(ALL) ALL/%admin ALL=NOPASSWD:ALL/g' /etc/sudoers
 
 # add chef
-/usr/bin/curl -L https://www.opscode.com/chef/install.sh | bash
+/usr/bin/curl -L https://chef.io/chef/install.sh | bash
 
 
 # Install project-specific packages

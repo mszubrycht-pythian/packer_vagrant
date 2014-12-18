@@ -1,6 +1,10 @@
 .vagrant
+*.swp
 *.box
 *.tar
 *.gz
 *.qcow2
 ssh_pubkeys
+iso/*
+Vagrantfile
+
