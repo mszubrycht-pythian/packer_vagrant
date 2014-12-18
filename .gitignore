@@ -4,6 +4,7 @@
 *.tar
 *.gz
 *.qcow2
+*.vmdk
 ssh_pubkeys
 iso/*
 Vagrantfile
