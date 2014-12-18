@@ -10,8 +10,8 @@ rm packer_virtualbox-iso_virtualbox.box || true
 packer build -only virtualbox-iso packer.json
 #packer build -debug -only virtualbox-iso packer.json
 
-vagrant box remove vagrant_packer || true
-vagrant box add vagrant_packer packer_virtualbox-iso_virtualbox.box
+vagrant box remove packer_vagrant || true
+vagrant box add packer_vagrant packer_virtualbox-iso_virtualbox.box
 
 endtime=`date`
 

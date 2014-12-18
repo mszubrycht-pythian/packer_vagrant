@@ -7,7 +7,6 @@ echo "*** START OF root_setup.sh ***"
 echo "******************************"
 echo ''
 
-
 # Updating and Upgrading dependencies
 # clean up apt lists first to avoid 'hash sum mismatch' sillyness
 rm -fR /var/lib/apt/lists/*
@@ -17,10 +16,8 @@ apt-get upgrade -y -qq > /dev/null
 # Install necessary libraries for guest additions and Vagrant NFS Share
 apt-get -y install linux-headers-$(uname -r) build-essential dkms nfs-common libssl-dev libreadline-dev zlib1g-dev cryptsetup ntp
 
-
 # Install good-to-haves
 apt-get -y install curl wget git vim tmux gawk zerofree
-
 
 # no-password sudo for "admin" group
 groupadd -r admin
@@ -31,7 +28,6 @@ sed -i -e 's/%admin ALL=(ALL) ALL/%admin ALL=NOPASSWD:ALL/g' /etc/sudoers
 
 # add chef
 /usr/bin/curl -L https://chef.io/chef/install.sh | bash
-
 
 # Install project-specific packages
 apt-get -y install nodejs npm 
