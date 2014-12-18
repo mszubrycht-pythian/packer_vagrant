@@ -4,7 +4,7 @@ packer_vagrant
 Overview
 --------
 
-Files contained in this repo will create a Vagrant box running Ubuntu 14.04.1, with a quite complete set of build toolchain, common utilities and the nodejs package.  The resulting Vagrant .box file is ~650M. 
+Files contained in this repo will create a Vagrant box running Ubuntu 14.04.1, with a quite complete build toolchain, common utilities and the nodejs package.  The resulting Vagrant .box file is ~650M. 
 
 
 The Impatient Way(tm)
