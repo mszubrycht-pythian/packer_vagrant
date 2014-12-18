@@ -16,7 +16,7 @@ Copy/paste _should_ work.
 git clone https://github.com/mszubrycht-pythian/packer_vagrant.git packer_vagrant
 cd packer_vagrant
 vagrant init 
-cd iso
+mkdir iso && cd iso
 wget http://releases.ubuntu.com/14.04.1/ubuntu-14.04.1-server-amd64.iso
 cd ../
 git clone https://github.com/mszubrycht-pythian/packer_vagrant.git
